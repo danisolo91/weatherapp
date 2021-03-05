@@ -1,0 +1,25 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Check weather by cityname!",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danisolo91/weatherapp.git"
+  },
+  "author": "Daniel Solomon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danisolo91/weatherapp/issues"
+  },
+  "homepage": "https://github.com/danisolo91/weatherapp#readme",
+  "devDependencies": {
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0"
+  }
+}
