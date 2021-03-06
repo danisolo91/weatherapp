@@ -2,11 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Weather App</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Weather App</h1>
+        <form>
+            <div class="inputs">
+                <input id="city-name" type="text" placeholder="Enter city name..." required>
+                <div class="go-btn">
+                    <input id="go-btn" type="submit" value="Go">
+                </div> 
+            </div>
+        </form>
+        <div class="weather">
+            <div class="place"></div>
+            <div class="main-info">
+                <div class="icon">
+                    <img src="">
+                </div>
+                <div class="temp">
+                    <span class="value"></span>
+                    <div class="units">
+                        <span class="celsius">°C</span>
+                        <span class="fahrenheit">°F</span>
+                    </div>
+                </div>
+            </div>
+            <div class="min-max">
+                <div class="min"></div>
+                <div class="max"></div>
+            </div>
+        </div>
+        <div class="footer">Made with ❤ by <a href="https://github.com/danisolo91">Daniel Solomon</a></div>
         <script src="main.js"></script>
     </body>
 </html>
