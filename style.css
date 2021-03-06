@@ -3,3 +3,59 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 50vw;
+    margin: auto;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.inputs {
+    position: relative;
+}
+
+#city-name {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#go-btn {
+    padding: 10px 20px;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.go-btn {
+    position: absolute;
+    top: 0px;
+    right: -22px;
+}
+
+.weather {
+    width: 300px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+}
