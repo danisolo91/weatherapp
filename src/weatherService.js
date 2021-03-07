@@ -2,7 +2,7 @@ const WeatherService = (() => {
     const url = 'https://api.openweathermap.org/data/2.5/weather?APPID=3374f07f34f654b5b0cdc1faca7f5db0&units=metric&q=';
     let weather = {};
 
-    const getData = async (city = 'Barcelona') => {
+    const getData = async (city) => {
         try {
             const response = await fetch(url + city, { mode: 'cors' });
             const data = await response.json();
@@ -10,9 +10,9 @@ const WeatherService = (() => {
             if (data.cod === 200) {
                 weather.city = data.name;
                 weather.country = data.sys.country;
-                weather.tempC = data.main.temp;
-                weather.tempMaxC = data.main.temp_max;
-                weather.tempMinC = data.main.temp_min;
+                weather.tempC = Math.round(data.main.temp);
+                weather.tempMaxC = Math.round(data.main.temp_max);
+                weather.tempMinC = Math.round(data.main.temp_min);
                 weather.tempF = celsiusToFahrenheit(data.main.temp);
                 weather.tempMaxF = celsiusToFahrenheit(data.main.temp_max);
                 weather.tempMinF = celsiusToFahrenheit(data.main.temp_min);
@@ -28,12 +28,7 @@ const WeatherService = (() => {
     };
 
     const celsiusToFahrenheit = (celsius) => {
-        const formatter = new Intl.NumberFormat('en-US', {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-        });
-
-        return +formatter.format(((celsius * 9 / 5) + 32))
+        return Math.round((celsius * 9 / 5) + 32)
     };
 
     return { getData }

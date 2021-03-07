@@ -1,17 +1,32 @@
+:root {
+    --primary-color: #007965;
+    --secondary-color: #00af91;
+    --tertiary-color: #e67e22;
+    --font-color: #eeeeee;
+  }
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color);
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-size: 2.6em;
 }
 
 form {
-    width: 50vw;
+    width: 500px;
     margin: auto;
 }
 
@@ -25,37 +40,111 @@ input:focus {
 
 #city-name {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 10px 60px 10px 10px;
+    border: none;
     border-radius: 5px;
+    color: var(--primary-color);
 }
 
 #go-btn {
     padding: 10px 20px;
     border-left: none;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    background-color: var(--tertiary-color);
+    color: #fff;
 }
 
 .go-btn {
     position: absolute;
     top: 0px;
-    right: -22px;
+    right: -1px;
+}
+
+.error-messages {
+    color:red;
+    font-size: 0.8em;
+    padding-left: 10px;
+    padding-top: 3px;
+    height: 10px;
 }
 
 .weather {
     width: 300px;
+    padding: 10px;
     margin: auto;
-    border: 1px solid #ddd;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: var(--secondary-color);
+}
+
+.location {
+    text-align: center;
+}
+
+.main-info {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.main-info .icon {
+    text-align: center;
+}
+
+.main-info .description {
+    font-size: 0.9em;
+}
+
+.temp {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.temp .value {
+    font-size: 3.6em;
+    padding-top: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.units {
+    color: var(--primary-color);
+    padding-top: 20px;
+}
+
+.units .celsius {
+    cursor: pointer;
+}
+
+.units .fahrenheit {
+    cursor: pointer;
+}
+
+.units .selected {
+    color: #fff;
+}
+
+.temp .min-max {
+    text-align: center;
+    padding-top: 19px;
+    font-size: 0.9em;
 }
 
 .footer {
     text-align: center;
+    font-size: 0.8em;
+    color: #bdc3c7;
+}
+
+.footer a {
+    color: #bdc3c7;
+}
+
+@media (max-width: 540px) {
+    form {
+        width: 90vw;
+    }
 }
