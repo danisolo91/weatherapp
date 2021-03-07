@@ -64,7 +64,7 @@ input:focus {
 }
 
 .error-messages {
-    color:red;
+    color: var(--tertiary-color);
     font-size: 0.8em;
     padding-left: 10px;
     padding-top: 3px;
