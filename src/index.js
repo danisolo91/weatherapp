@@ -26,14 +26,14 @@ const App = (() => {
     });
 
     celsius.addEventListener('click', (e) => {
-        if(units != 'C') {
+        if (units != 'C') {
             units = 'C';
             renderTemp();
         }
     });
 
     fahrenheit.addEventListener('click', (e) => {
-        if(units != 'F') {
+        if (units != 'F') {
             units = 'F';
             renderTemp();
         }
@@ -47,11 +47,11 @@ const App = (() => {
     };
 
     const renderTemp = () => {
-        if(units === 'C') {
+        if (units === 'C') {
             celsius.classList.add('selected');
             fahrenheit.classList.remove('selected');
         }
-        if(units === 'F') {
+        if (units === 'F') {
             fahrenheit.classList.add('selected');
             celsius.classList.remove('selected');
         }
@@ -63,13 +63,13 @@ const App = (() => {
     const load = async (city = 'Barcelona') => {
         try {
             weatherData = await WeatherService.getData(city);
-            if(weatherData.cod === '404') {
+            if (weatherData.cod === '404') {
                 errorMessages.textContent = 'Location not found';
             } else {
                 errorMessages.textContent = '';
             }
             renderData();
-        } catch(error) {
+        } catch (error) {
             console.log(error);
         }
     };
